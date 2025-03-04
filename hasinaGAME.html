@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PLAY FACIST HASINA</title>
+
+    <style>
+
+        body {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background-color: #f0f0f0;
+
+            font-family: Arial, sans-serif;
+
+        }
+
+        #game-container {
+
+            display: none;
+
+            width: 100%;
+
+            height: 100%;
+
+        }
+
+        #rotate-message {
+
+            text-align: center;
+
+            font-size: 24px;
+
+            color: #333;
+
+        }
+
+        .rotate-icon {
+
+            font-size: 50px;
+
+            margin-top: 20px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<div id="rotate-message">
+
+    <p>Please rotate your device to play the game.</p>
+
+    <div class="rotate-icon">↻</div>
+
+</div>
+
+
+
+<div id="game-container">
+
+    <iframe src="https://html-classic.itch.zone/html/12822958/Hasina%20game%20export/index.html" width="100%" height="100%" frameborder="0"></iframe>
+
+</div>
+
+
+
+<script>
+
+    function checkOrientation() {
+
+        if (window.innerHeight > window.innerWidth) {
+
+            document.getElementById("game-container").style.display = "none";
+
+            document.getElementById("rotate-message").style.display = "block";
+
+        } else {
+
+            document.getElementById("game-container").style.display = "block";
+
+            document.getElementById("rotate-message").style.display = "none";
+
+        }
+
+    }
+
+
+
+    window.addEventListener("resize", checkOrientation);
+
+    window.addEventListener("orientationchange", checkOrientation);
+
+
+
+    checkOrientation();
+
+</script>
+
+
+
+</body>
+
+</html>
